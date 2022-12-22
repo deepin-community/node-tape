@@ -1,0 +1,1 @@
+tap -J `ls test/*.js|grep -v -f debian/tests/tests_excluded`

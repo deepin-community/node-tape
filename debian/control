@@ -1,0 +1,60 @@
+Source: node-tape
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Bastien Roucariès <rouca@debian.org>,
+ Ross Gammon <rosco2@ubuntu.com>
+Section: javascript
+Testsuite: autopkgtest-pkg-nodejs
+Priority: optional
+Build-Depends: debhelper-compat (= 13)
+ , dh-sequence-nodejs
+ , node-concat-stream <!nocheck>
+ , node-debbundle-es-to-primitive <!nocheck>
+ , node-deep-equal (>= 2.0.5~) <!nocheck>
+ , node-define-properties <!nocheck>
+ , node-defined <!nocheck>
+ , node-falafel <!nocheck>
+ , node-function-bind (>= 1.1.1) <!nocheck>
+ , node-glob (>= 7.1.2) <!nocheck>
+ , node-inherits (>= 2.0.3) <!nocheck>
+ , node-istanbul <!nocheck>
+ , node-js-yaml (>= 3.10.0) <!nocheck>
+ , node-minimist <!nocheck>
+ , node-object-inspect (>= 1.5.0) <!nocheck>
+ , node-resolve (>= 1.4.0) <!nocheck>
+ , node-resumer <!nocheck>
+ , node-tap (>= 8) <!nocheck>
+ , node-tap-parser <!nocheck>
+ , node-through <!nocheck>
+Standards-Version: 4.5.1
+Vcs-Browser: https://salsa.debian.org/js-team/node-tape
+Vcs-Git: https://salsa.debian.org/js-team/node-tape.git
+Homepage: https://github.com/substack/tape
+Rules-Requires-Root: no
+
+Package: node-tape
+Architecture: all
+Depends: ${misc:Depends}
+ , node-debbundle-es-to-primitive
+ , node-deep-equal (>= 2.0.5~)
+ , node-define-properties
+ , node-defined
+ , node-es-abstract
+ , node-function-bind (>= 1.1.1)
+ , node-glob (>= 7.1.2)
+ , node-inherits (>= 2.0.3)
+ , node-istanbul
+ , node-minimatch
+ , node-minimist
+ , node-object-inspect (>= 1.5.0)
+ , node-resolve (>= 1.4.0)
+ , node-resumer
+ , node-through
+ , nodejs (>= 4.7)
+Provides: ${nodejs:Provides}
+Description: tap-producing test harness for node and browsers
+ Tape is a tap-producing test harness for node and browsers requiring
+ only a few line of code. It can be used for unit and integration testing.
+ .
+ Tests are written in pure javascript, so tests could be run using Node.js.
+ .
+ Node.js is an event-based server-side JavaScript engine.

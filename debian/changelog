@@ -1,0 +1,79 @@
+node-tape (5.3.1+~cs3.6.9-2) unstable; urgency=medium
+
+  * Team upload
+  * Back to unstable after successful tests
+
+ -- Yadd <yadd@debian.org>  Thu, 19 Aug 2021 08:47:32 +0200
+
+node-tape (5.3.1+~cs3.6.9-1) experimental; urgency=medium
+
+  * Team upload
+  * Fix GitHub tags regex
+  * Update test
+  * Embed dotignore for-each has-dynamic-import string.prototype.trim
+  * New upstream version 5.3.1+~cs3.6.9
+  * Drop all patches
+  * Add dependencies to node-debbundle-es-to-primitive,
+    node-define-properties, node-es-abstract, node-istanbul, node-minimatch
+  * Require node-deep-equal ≥ 2.0.5
+  * Update copyright
+
+ -- Yadd <yadd@debian.org>  Mon, 16 Aug 2021 21:48:59 +0200
+
+node-tape (4.11.0-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Utkarsh Gupta ]
+  * New upstream version 4.11.0
+  * Update d/patches/*
+  * Switch install and test to pkg-js-tools
+
+  [ lintian-brush ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Update standards version to 4.5.0, no changes needed.
+
+  [ Xavier Guimard ]
+  * Bump debhelper compatibility level to 13
+  * Declare compliance with policy 4.5.1
+  * Add "Rules-Requires-Root: no"
+  * Add debian/gbp.conf
+  * Use dh-sequence-nodejs
+  * Fix register path
+  * Update patches
+  * Ignore error tests: error strings may change
+  * Ignore test/exit.js: path changes with autopkgtest
+
+ -- Xavier Guimard <yadd@debian.org>  Wed, 16 Dec 2020 15:17:26 +0100
+
+node-tape (4.9.1-1) unstable; urgency=medium
+
+  * New upstream version
+
+ -- Bastien Roucariès <rouca@debian.org>  Sun, 24 Jun 2018 23:33:23 +0200
+
+node-tape (4.9.0-1) unstable; urgency=medium
+
+  * New upstream version
+  * Bump compat and policy
+  * Move to salsa
+  * Bug fix: "autopkgtest broken in new version", thanks to Steve Langasek
+    (Closes: #893337).
+
+ -- Bastien Roucariès <rouca@debian.org>  Wed, 09 May 2018 17:17:52 +0200
+
+node-tape (4.8.0+20172409gitb66f8f80928bb-1) unstable; urgency=medium
+
+  * New upstream release
+  * Bump policy no change
+  * Bug fix: "node-tape FTBFS: failed 2 of 41 tests", thanks to Adrian
+    Bunk (Closes: #876935).
+
+ -- Bastien Roucariès <rouca@debian.org>  Wed, 04 Oct 2017 21:57:38 +0200
+
+node-tape (4.6.3-1) unstable; urgency=low
+
+  * Initial release (Closes: #798278).
+
+ -- Bastien Roucariès <rouca@debian.org>  Mon, 03 Apr 2017 14:20:30 +0200

@@ -1,0 +1,10 @@
+# need older tap / tap-parser
+test/deep-equal-failure.js
+test/not-deep-equal-failure.js
+test/not-equal-failure.js
+test/stackTrace.js
+test/teardown.js
+test/too_many.js
+# Fail with autopkgtest
+test/async-await.js
+test/exit.js

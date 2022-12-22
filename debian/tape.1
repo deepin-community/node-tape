@@ -1,0 +1,40 @@
+.Dd 8/4/17
+.Dt tape 1
+.Sh NAME
+.Nm tape
+.Nd tap-producing test harness for node and browsers
+.Sh SYNOPSIS
+.Nm
+.Op Fl r Ar module
+.Op Ar file
+.Op Ar
+.Sh DESCRIPTION
+.Nm
+is a tap-producing test harness for node and browsers requiring
+only a few line of code. It can be used for unit and integration testing.
+.
+.Nm
+will execute test described by file option. File are interpreted using
+glob module by default. You may therefore need to quote file in order to avoid
+globbing by shell.
+.
+Tests are written in pure javascript, so tests could be run using Node.js.
+.
+.Sh OPTIONS
+.Bl -tag -width -indent
+.It Fl r, Fl Fl require
+load one or more modules before running any tests. Please note that all modules loaded using the -r flag will run before any tests, regardless of when they are specified. For example,
+.Nm
+-r a b -r c will actually load a and c before loading b, since they are flagged as required modules.
+.El
+.Pp
+.Sh EXAMPLES
+.nf
+tape 'tests/**/*.js'
+tape -r './my/local/module' 'tests/**/*.js'
+tape -r 'babel-register' 'tests/**/*.js'
+.fi
+.Sh SEE ALSO
+.Xr tap 1 ,
+.Xr nodejs 1 ,
+.Xr glob 7
