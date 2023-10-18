@@ -1,1 +1,1 @@
-tap -J `ls test/*.js|grep -v -f debian/tests/tests_excluded`
+ls test/*.js|grep -v -f debian/tests/tests_excluded|xargs -d '\n' tap -R tap --no-cov
