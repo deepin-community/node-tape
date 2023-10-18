@@ -1,33 +1,45 @@
 version=4
 opts=\
 dversionmangle=s/\+(debian|dfsg|ds|deb)(\.\d+)?$//,\
-filenamemangle=s/.*\/v?([\d\.-]+)\.tar\.gz/node-tape-$1.tar.gz/ \
- https://github.com/substack/tape/tags .*/archive/.*/v?([\d\.]+).tar.gz group
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-tape-$1/ \
+ https://github.com/ljharb/tape/tags .*/archive/.*/v?([\d\.]+).tar.gz group
 
 opts=\
 component=dotignore,\
 ctype=nodejs,\
 dversionmangle=auto,\
-filenamemangle=s/.*\/v?([\d\.-]+)\.tar\.gz/node-dotignore-$1.tar.gz/ \
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-dotignore-$1/ \
  https://github.com/bmeck/dotignore/tags .*/archive.*/v?([\d\.]+).tar.gz checksum
 
 opts=\
 component=for-each,\
 ctype=nodejs,\
 dversionmangle=auto,\
-filenamemangle=s/.*\/v?([\d\.-]+)\.tar\.gz/node-for-each-$1.tar.gz/ \
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-for-each-$1/ \
  https://github.com/Raynos/for-each/tags .*/archive.*/v?([\d\.]+).tar.gz checksum
 
 opts=\
 component=has-dynamic-import,\
 ctype=nodejs,\
 dversionmangle=auto,\
-filenamemangle=s/.*\/v?([\d\.-]+)\.tar\.gz/node-has-dynamic-import-$1.tar.gz/ \
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-has-dynamic-import-$1/ \
  https://github.com/inspect-js/has-dynamic-import/tags .*/archive.*/v?([\d\.]+).tar.gz checksum
 
 opts=\
 component=stringprototypetrim,\
 ctype=nodejs,\
 dversionmangle=auto,\
-filenamemangle=s/.*\/v?([\d\.-]+)\.tar\.gz/node-String.prototype.trim-$1.tar.gz/ \
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-String.prototype.trim-$1/ \
  https://github.com/es-shims/String.prototype.trim/tags .*/archive.*/v?([\d\.]+).tar.gz checksum
+
+# It is not recommended use npmregistry. Please investigate more.
+# Take a look at https://wiki.debian.org/debian/watch/
+opts="searchmode=plain,component=types-tape,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-tape-$1/" \
+ https://registry.npmjs.org/@types/tape https://registry.npmjs.org/@types/tape/-/tape-([\d\.]+)@ARCHIVE_EXT@ checksum
+
+opts=\
+component=array-prototype-every,\
+ctype=nodejs,\
+dversionmangle=auto,\
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-Array.prototype.every-$1/ \
+ https://github.com/es-shims/Array.prototype.every/tags .*/archive.*/v?([\d\.]+).tar.gz checksum

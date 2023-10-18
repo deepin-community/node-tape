@@ -1,6 +1,6 @@
 {
 	"name": "has-dynamic-import",
-	"version": "2.0.0",
+	"version": "2.0.1",
 	"description": "Does the current environment have `import()` support?",
 	"main": "index.js",
 	"browser": {
@@ -58,14 +58,14 @@
 	},
 	"homepage": "https://github.com/inspect-js/has-dynamic-import#readme",
 	"devDependencies": {
-		"@ljharb/eslint-config": "^17.6.0",
+		"@ljharb/eslint-config": "^20.0.0",
 		"aud": "^1.1.5",
 		"auto-changelog": "^2.3.0",
-		"eslint": "^7.27.0",
+		"eslint": "^8.4.1",
 		"nyc": "^10.3.2",
-		"safe-publish-latest": "^1.1.4",
+		"safe-publish-latest": "^2.0.0",
 		"semver": "^6.3.0",
-		"tape": "^5.2.2"
+		"tape": "^5.3.2"
 	},
 	"directories": {
 		"test": "test"
@@ -79,7 +79,8 @@
 		"hideCredit": true
 	},
 	"dependencies": {
-		"call-bind": "^1.0.2"
+		"call-bind": "^1.0.2",
+		"get-intrinsic": "^1.1.1"
 	},
 	"testling": {
 		"files": "test/index.js"

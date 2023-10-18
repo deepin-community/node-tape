@@ -1,3 +1,94 @@
+node-tape (5.6.1+~cs8.20.19-1) unstable; urgency=medium
+
+  * Team upload
+  * Update homepage
+  * New upstream version 5.6.1+~cs8.20.19
+
+ -- Yadd <yadd@debian.org>  Thu, 10 Nov 2022 18:20:04 +0100
+
+node-tape (5.6.1+~cs8.20.17-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version 5.6.1+~cs8.20.17
+
+ -- Yadd <yadd@debian.org>  Fri, 23 Sep 2022 15:09:06 +0200
+
+node-tape (5.6.0+~cs8.20.17-1) unstable; urgency=medium
+
+  * Team upload
+  * Declare compliance with policy 4.6.1
+  * New upstream version 5.6.0+~cs8.20.17
+
+ -- Yadd <yadd@debian.org>  Thu, 18 Aug 2022 07:41:28 +0200
+
+node-tape (5.5.3+~cs8.20.16-1) unstable; urgency=medium
+
+  * Team upload
+  * Update manpage
+  * New upstream version 5.5.3
+  * Refresh test
+
+ -- Yadd <yadd@debian.org>  Tue, 12 Apr 2022 17:33:29 +0200
+
+node-tape (5.5.2+~cs8.20.16-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version 5.5.2+~cs8.20.16
+
+ -- Yadd <yadd@debian.org>  Tue, 15 Feb 2022 12:21:44 +0100
+
+node-tape (5.5.1+~cs8.20.16-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version 5.5.1+~cs8.20.16
+
+ -- Yadd <yadd@debian.org>  Fri, 11 Feb 2022 12:27:46 +0100
+
+node-tape (5.5.0+~cs8.20.16-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version 5.5.0+~cs8.20.16
+  * Update lintian overrdies
+  * Update copyright
+
+ -- Yadd <yadd@debian.org>  Mon, 07 Feb 2022 08:14:40 +0100
+
+node-tape (5.4.1+~cs8.20.16-1) unstable; urgency=medium
+
+  * Team upload
+  * Embed array.prototype.every
+  * New upstream version 5.4.1+~cs8.20.16
+
+ -- Yadd <yadd@debian.org>  Tue, 18 Jan 2022 06:36:30 +0100
+
+node-tape (5.4.0+~cs7.19.13-1) unstable; urgency=medium
+
+  * Team upload
+  * Add missing build dependency on dh addon.
+  * New upstream version 5.4.0+~cs7.19.13
+
+ -- Yadd <yadd@debian.org>  Wed, 29 Dec 2021 09:22:02 +0100
+
+node-tape (5.3.2+~cs7.19.13-1) unstable; urgency=medium
+
+  * Team upload
+  * Embed typescript declarations and repack
+
+ -- Yadd <yadd@debian.org>  Mon, 13 Dec 2021 14:30:04 +0100
+
+node-tape (5.3.2+~cs3.6.10-1) unstable; urgency=medium
+
+  * Team upload
+  * Update standards version to 4.6.0, no changes needed.
+  * Fix filenamemangle
+  * Update nodejs dependency to nodejs:any
+  * Drop unneeded versioned dependency constraints
+  * New upstream version 5.3.2+~cs3.6.10, updates:
+    + tape 5.3.2
+    + string.prototype.trim 1.2.5
+
+ -- Yadd <yadd@debian.org>  Sun, 21 Nov 2021 11:57:53 +0100
+
 node-tape (5.3.1+~cs3.6.9-2) unstable; urgency=medium
 
   * Team upload

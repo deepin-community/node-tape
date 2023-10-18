@@ -28,6 +28,33 @@ load one or more modules before running any tests. Please note that all modules 
 -r a b -r c will actually load a and c before loading b, since they are flagged as required modules.
 .El
 .Pp
+.Bl -tag -width -indent
+.It Fl i, Fl Fl ignore
+ignore tests from certain folders and/or files are not intended to be run. It defaults to `.gitignore` file when passed with no argument. For example:
+.nf
+tape -i .ignore **/*.js`
+.fi
+.El
+.Pp
+.Bl -tag -width -indent
+.It Fl Fl no-only
+This is particularly useful in a CI environment where an "only test" is not supposed to go unnoticed. By passing the `--no-only` flag, any existing "only test" causes tests to fail:
+.nf
+tape --no-only **/*.js`
+.fi
+Alternatively, the environment variable `NODE_TAPE_NO_ONLY_TEST` can be set to `true` to achieve the same behavior; the command-line flag takes precedence.
+.El
+.Pp
+.Sh METHODS
+.Bl -tag -width -indent
+The assertion methods in `tape` are heavily influenced or copied from the methods in node-tap.
+.nf
+.Rs
+var test = require('tape')
+.Re
+.fi
+.El
+.Pp
 .Sh EXAMPLES
 .nf
 tape 'tests/**/*.js'
@@ -35,6 +62,7 @@ tape -r './my/local/module' 'tests/**/*.js'
 tape -r 'babel-register' 'tests/**/*.js'
 .fi
 .Sh SEE ALSO
+.Xr /usr/share/doc/node-tape/readme.markdown.gz ,
 .Xr tap 1 ,
 .Xr nodejs 1 ,
 .Xr glob 7

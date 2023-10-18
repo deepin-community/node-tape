@@ -1,0 +1,4 @@
+# Generic types-* path
+add-component-copyright types-*
+# False positive
+very-long-line-length-in-source-file *.markdown*

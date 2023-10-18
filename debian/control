@@ -1,10 +1,9 @@
 Source: node-tape
+Section: javascript
+Priority: optional
 Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
 Uploaders: Bastien Roucariès <rouca@debian.org>,
- Ross Gammon <rosco2@ubuntu.com>
-Section: javascript
-Testsuite: autopkgtest-pkg-nodejs
-Priority: optional
+           Ross Gammon <rosco2@ubuntu.com>
 Build-Depends: debhelper-compat (= 13)
  , dh-sequence-nodejs
  , node-concat-stream <!nocheck>
@@ -13,22 +12,24 @@ Build-Depends: debhelper-compat (= 13)
  , node-define-properties <!nocheck>
  , node-defined <!nocheck>
  , node-falafel <!nocheck>
- , node-function-bind (>= 1.1.1) <!nocheck>
- , node-glob (>= 7.1.2) <!nocheck>
- , node-inherits (>= 2.0.3) <!nocheck>
+ , node-function-bind <!nocheck>
+ , node-glob <!nocheck>
+ , node-inherits <!nocheck>
  , node-istanbul <!nocheck>
- , node-js-yaml (>= 3.10.0) <!nocheck>
+ , node-js-yaml <!nocheck>
  , node-minimist <!nocheck>
- , node-object-inspect (>= 1.5.0) <!nocheck>
- , node-resolve (>= 1.4.0) <!nocheck>
+ , node-object-keys <!nocheck>
+ , node-object-inspect <!nocheck>
+ , node-resolve <!nocheck>
  , node-resumer <!nocheck>
- , node-tap (>= 8) <!nocheck>
  , node-tap-parser <!nocheck>
+ , node-tap <!nocheck>
  , node-through <!nocheck>
-Standards-Version: 4.5.1
+Standards-Version: 4.6.1
 Vcs-Browser: https://salsa.debian.org/js-team/node-tape
 Vcs-Git: https://salsa.debian.org/js-team/node-tape.git
-Homepage: https://github.com/substack/tape
+Homepage: https://github.com/ljharb/tape
+Testsuite: autopkgtest-pkg-nodejs
 Rules-Requires-Root: no
 
 Package: node-tape
@@ -39,17 +40,18 @@ Depends: ${misc:Depends}
  , node-define-properties
  , node-defined
  , node-es-abstract
- , node-function-bind (>= 1.1.1)
- , node-glob (>= 7.1.2)
- , node-inherits (>= 2.0.3)
+ , node-function-bind
+ , node-glob
+ , node-inherits
  , node-istanbul
  , node-minimatch
  , node-minimist
- , node-object-inspect (>= 1.5.0)
- , node-resolve (>= 1.4.0)
+ , node-object-keys
+ , node-object-inspect
+ , node-resolve
  , node-resumer
  , node-through
- , nodejs (>= 4.7)
+ , nodejs:any
 Provides: ${nodejs:Provides}
 Description: tap-producing test harness for node and browsers
  Tape is a tap-producing test harness for node and browsers requiring

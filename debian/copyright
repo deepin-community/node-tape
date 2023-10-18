@@ -1,14 +1,30 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: tape
-Upstream-Contact: https://github.com/substack/tape/issues
-Source: https://github.com/substack/tape
+Upstream-Contact: https://github.com/ljharb/tape/issues
+Source: https://github.com/ljharb/tape
  https://github.com/bmeck/dotignore/tags
  https://github.com/Raynos/for-each/tags
  https://github.com/inspect-js/has-dynamic-import/tags
  https://github.com/es-shims/String.prototype.trim/tags
+ https://registry.npmjs.org/@types/tape
+ https://github.com/es-shims/Array.prototype.every/tags
 
 Files: *
 Copyright: 2012 James Halliday <mail@substack.net>
+License: Expat
+
+Files: array-prototype-every/*
+ stringprototypetrim/*
+Copyright: 2015-2016 Jordan Harband
+License: Expat
+
+Files: debian/*
+Copyright: 2017-2018 Bastien Roucariès <rouca@debian.org>
+ 2020-2022 Yadd <yadd@debian.org>
+License: Expat
+
+Files: dotignore/*
+Copyright: bradleymeck
 License: Expat
 
 Files: for-each/*
@@ -19,13 +35,8 @@ Files: has-dynamic-import/*
 Copyright: 2021 Inspect JS
 License: Expat
 
-Files: stringprototypetrim/*
-Copyright: 2015 Jordan Harband
-License: Expat
-
-Files: debian/*
-Copyright: 2017-2018 Bastien Roucariès <rouca@debian.org>
- 2020-2021 Yadd <yadd@debian.org>
+Files: types-*/*
+Copyright: Microsoft Corporation
 License: Expat
 
 License: Expat
